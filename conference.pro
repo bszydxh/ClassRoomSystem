@@ -10,31 +10,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    admincfwindow.cpp \
-    adminrswindow.cpp \
-    adminwindow.cpp \
     main.cpp \
-    mainwindow.cpp \
-    mycfsql.cpp \
-    reservewindow.cpp \
-    roomwindow.cpp \
-    signwindow.cpp \
-    usercfwindow.cpp \
-    userrswindow.cpp \
-    userwindow.cpp
+    source/admincfwindow.cpp \
+    source/adminrswindow.cpp \
+    source/adminwindow.cpp \
+    source/mainwindow.cpp \
+    source/mycfsql.cpp \
+    source/reservewindow.cpp \
+    source/roomwindow.cpp \
+    source/signwindow.cpp \
+    source/usercfwindow.cpp \
+    source/userrswindow.cpp \
+    source/userwindow.cpp
 
-HEADERS += \
-    admincfwindow.h \
-    adminrswindow.h \
-    adminwindow.h \
-    mainwindow.h \
-    mycfsql.h \
-    reservewindow.h \
-    roomwindow.h \
-    signwindow.h \
-    usercfwindow.h \
-    userrswindow.h \
-    userwindow.h
+INCLUDEPATH += ./head
 
 FORMS += \
     mainwindow.ui
@@ -43,3 +32,22 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    README.md \
+    conference.pro.user \
+    conference.pro.user.7fcb233 \
+    imgs/conference.png
+
+HEADERS += \
+    head/admincfwindow.h \
+    head/adminrswindow.h \
+    head/adminwindow.h \
+    head/mainwindow.h \
+    head/mycfsql.h \
+    head/reservewindow.h \
+    head/roomwindow.h \
+    head/signwindow.h \
+    head/usercfwindow.h \
+    head/userrswindow.h \
+    head/userwindow.h

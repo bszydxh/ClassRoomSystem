@@ -37,7 +37,7 @@ private:
     QSqlDatabase db;
 public:
     MyCfSql();
-    void createConnectionByName(const QString &connectionName); //使用自定义 connectionName 创建连接
+    bool createConnectionByName(const QString &connectionName); //使用自定义 connectionName 创建连接
     void getConnectionByName(const QString &connectionName);  // 使用自定义 connectionName 获取连接
     void outputDatabaseInfo();
 
