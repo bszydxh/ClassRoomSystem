@@ -24,6 +24,11 @@
 数据库需要配置为下面对应配置，或者修改mycfsql.cpp文件中的`createConnectionByName`函数，以及signwindow.cpp构造函数中`cf.createConnectionByName("conference")`数据库名
 表需要完全相同配置
 ### 1.数据库
+好一个MySQL，qt6没有提供相应的mysql驱动库，需要自行编译
+
+使用mysql连接
+通过修改mycfsql代码来更改配置
+
 服务器：本地
 数据库名：conference
 用户名：root
@@ -31,6 +36,7 @@
 端口号：3306
 
 ### 2.表
+**警告：以下主键均为自增主键**
 #### 2.1 conference_users
 |字段名称|数据类型|是否为可空|默认值|含义|
 |:---:|:---:|:---:|:---:|:---:|
