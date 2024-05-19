@@ -31,12 +31,12 @@ public:
         verticalLayout_2 = new QVBoxLayout(centralwidget);
         verticalLayout_2->setObjectName("verticalLayout_2");
         pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
+        pushButton->setObjectName("pushButton_signup");
 
         verticalLayout_2->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setObjectName("pushButton_login");
 
         verticalLayout_2->addWidget(pushButton_2);
 
@@ -55,7 +55,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\347\256\241\347\220\206\345\221\230\347\225\214\351\235\242", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "\347\256\241\347\220\206\344\274\232\350\256\256\345\256\244", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "\347\256\241\347\220\206\346\225\231\345\256\244", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\347\256\241\347\220\206\351\242\204\347\272\246", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272\347\231\273\345\275\225", nullptr));
     } // retranslateUi

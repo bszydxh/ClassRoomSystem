@@ -199,6 +199,7 @@
     <ClCompile Include="source\usercfwindow.cpp" />
     <ClCompile Include="source\userrswindow.cpp" />
     <ClCompile Include="source\userwindow.cpp" />
+    <ClCompile Include="utf8_oct.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head\admincfwindow.h" />
@@ -236,11 +237,15 @@
     <QtUic Include="mainwindow.ui" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="conference.sql" />
     <None Include="mysql-qt.md" />
     <None Include="README.md" />
     <None Include="imgs\conference.png" />
     <None Include="conference.pro.user" />
     <None Include="conference.pro.user.7fcb233" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="decode.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />

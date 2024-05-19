@@ -5,7 +5,7 @@ AdminWindow::AdminWindow()
     AdminUi adminUi=AdminUi();
     adminUi.setupUi(this);
 
-    QPushButton* cfBtr=findChild<QPushButton*>("pushButton");   //管理会议室按钮
+    QPushButton* cfBtr=findChild<QPushButton*>("pushButton");   //管理教室按钮
     QPushButton* rsBtr=findChild<QPushButton*>("pushButton_2");   //管理预约按钮
     connect(cfBtr,&QPushButton::clicked,this,[=](){
         AdminCfWindow* p=new AdminCfWindow();

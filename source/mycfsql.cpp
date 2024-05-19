@@ -1,4 +1,5 @@
 #include "mycfsql.h"
+#include <memory>
 #if __has_include("config.h")//git数据库密码安全
 #include "config.h"
 #elif 
@@ -12,7 +13,6 @@ MyCfSql::MyCfSql()
 }
 
 bool MyCfSql::createConnectionByName(const QString& connectionName) {
-
 	db = QSqlDatabase::addDatabase("QMYSQL", connectionName);
 	// 数据库连接需要设置的信息
 	db.setHostName("localhost"); // 数据库服务器IP，我用的是本地电脑
@@ -56,18 +56,21 @@ void MyCfSql::insertNameUsers(const QString& name, const QString& password, cons
 	query.exec();
 	qDebug() << query.lastError();
 }
-Users* MyCfSql::selectQueryUsers(const QString& name) {
+std::unique_ptr<Users> MyCfSql::selectQueryUsers(const QString& name) {
 	QString sql = "SELECT * FROM conference_users WHERE users_name='" + name + "'";
 	QSqlQuery query(db);    // [1] 传入数据库连接
 	if (!query.exec(sql)) return NULL;// [2] 执行sql语句
 	if (query.size() == 0) return NULL;;
-	Users* user = new Users();
+	std::unique_ptr<Users> user(new Users());
 	while (query.next()) {  // [3] 遍历查询结果
 		user->name = query.value(1).toString();
 		user->password = query.value(2).toString();
 		user->author = query.value(3).toInt();
 	}
+	query.clear();
+	query.finish();
 	return user;
+
 }
 
 void MyCfSql::queryAllUsers() {
@@ -83,7 +86,7 @@ void MyCfSql::queryAllUsers() {
 	}
 }
 
-//会议室数据//
+//教室数据//
 void MyCfSql::insertNameRooms(const QString& name, const int number, const int capacity, const int square, const QString& describe, const QString& reserve) {
 	QSqlQuery query(db);
 	query.prepare("INSERT INTO conference_rooms(rooms_name, rooms_number,rooms_capacity,rooms_square,rooms_describe,rooms_reserve) VALUES (:rooms_name, :rooms_number,:rooms_capacity,:rooms_square,:rooms_describe,:rooms_reserve)");

@@ -38,11 +38,11 @@ void RoomWindow::addRoom(){
     QString reserve="000000000000";
     Rooms* room=cf.selectQueryRooms(number);
     if(room!=NULL){
-        QMessageBox::critical(this,"会议室添加","会议室已存在");
+        QMessageBox::critical(this,"教室添加","教室已存在");
         return;
     }
     cf.insertNameRooms(name,number,capacity,square,describe,reserve);
-    QMessageBox::information(this,"会议室添加","会议室添加成功");
+    QMessageBox::information(this,"教室添加","教室添加成功");
 }
 void RoomWindow::updateRoom(){
     QString name=findChild<QLineEdit*>("lineEdit")->text();
@@ -51,5 +51,5 @@ void RoomWindow::updateRoom(){
     int square=findChild<QLineEdit*>("lineEdit_4")->text().toInt();
     QString describe=findChild<QTextEdit*>("textEdit")->toPlainText();
     cf.updateRooms(name,number,capacity,square,describe);
-    QMessageBox::information(this,"会议室修改","会议室修改成功");
+    QMessageBox::information(this,"教室修改","教室修改成功");
 }

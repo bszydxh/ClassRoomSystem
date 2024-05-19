@@ -24,7 +24,7 @@ AdminCfWindow::AdminCfWindow()
     updateCf();
 }
 
-void AdminCfWindow::addItem(QString str){   //添加会议室
+void AdminCfWindow::addItem(QString str){   //添加教室
     QListWidget* p=findChild<QListWidget*>("listWidget");
     QListWidgetItem *item = new QListWidgetItem(p);
     QCheckBox* checkbox = new QCheckBox;
@@ -33,7 +33,7 @@ void AdminCfWindow::addItem(QString str){   //添加会议室
     p->addItem(item);
     p->setItemWidget(item, checkbox);
 }
-void AdminCfWindow::delItem(){  //删除会议室
+void AdminCfWindow::delItem(){  //删除教室
     QListWidget* listwidget=findChild<QListWidget*>("listWidget");
     for(int i = 0; i < listwidget->count(); i++){
         QListWidgetItem *item = listwidget->item(i);
@@ -47,7 +47,7 @@ void AdminCfWindow::delItem(){  //删除会议室
     }
     updateCf();
 }
-void  AdminCfWindow::updateItem(){  //修改会议室
+void  AdminCfWindow::updateItem(){  //修改教室
     QListWidget* listwidget=findChild<QListWidget*>("listWidget");
     for(int i = 0; i < listwidget->count(); i++){
         QListWidgetItem *item = listwidget->item(i);
@@ -63,7 +63,7 @@ void  AdminCfWindow::updateItem(){  //修改会议室
             return;
         }
     }
-    QMessageBox::critical(this,"会议室修改","没有选择会议室");
+    QMessageBox::critical(this,"教室修改","没有选择教室");
 }
 void AdminCfWindow::updateCf(){ //更新列表
     QListWidget* p=findChild<QListWidget*>("listWidget");

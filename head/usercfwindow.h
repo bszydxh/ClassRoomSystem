@@ -63,7 +63,7 @@ public:
         horizontalLayout->addWidget(pushButton_3);
 
         pushButton_2 = new QPushButton(widget_2);
-        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setObjectName("pushButton_login");
 
         horizontalLayout->addWidget(pushButton_2);
 
@@ -118,12 +118,12 @@ public:
         gridLayout->addWidget(dateEdit, 1, 1, 1, 1);
 
         label = new QLabel(widget);
-        label->setObjectName("label");
+        label->setObjectName("label_user");
 
         gridLayout->addWidget(label, 1, 0, 1, 1);
 
         label_2 = new QLabel(widget);
-        label_2->setObjectName("label_2");
+        label_2->setObjectName("label_user");
 
         gridLayout->addWidget(label_2, 2, 0, 1, 1);
 
@@ -141,7 +141,7 @@ public:
         gridLayout_2->addWidget(widget, 0, 0, 1, 1);
 
         pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
+        pushButton->setObjectName("pushButton_signup");
 
         gridLayout_2->addWidget(pushButton, 1, 0, 1, 1);
 
@@ -154,7 +154,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\351\242\204\347\272\246\344\274\232\350\256\256\345\256\244\347\225\214\351\235\242", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\351\242\204\347\272\246\346\225\231\345\256\244\347\225\214\351\235\242", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\346\237\245\347\234\213", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\351\242\204\347\272\246", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "\347\273\223\346\235\237\346\227\266\351\227\264\357\274\232", nullptr));
@@ -163,8 +163,8 @@ public:
         dateEdit->setDisplayFormat(QCoreApplication::translate("MainWindow", "M/d", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\346\227\245\346\234\237\357\274\232", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "\345\274\200\345\247\213\346\227\266\351\227\264\357\274\232", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "\344\274\232\350\256\256\344\272\272\346\225\260\357\274\232", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "\344\274\232\350\256\256\344\270\273\351\242\230\357\274\232", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "\346\225\231\345\255\246\344\272\272\346\225\260\357\274\232", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "\346\225\231\345\255\246\344\270\273\351\242\230\357\274\232", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\347\255\233\351\200\211", nullptr));
     } // retranslateUi
 
@@ -180,9 +180,9 @@ private:
 public:
     UserCfWindow(QString name);
     void addItem(QString str);
-    void filter();    //筛选会议室并更新界面
-    void reserve();    //预约会议室
-    void view();    //查看会议室
+    void filter();    //筛选教室并更新界面
+    void reserve();    //预约教室
+    void view();    //查看教室
 };
 
 #endif // USERCFWINDOW_H

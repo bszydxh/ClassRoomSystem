@@ -68,17 +68,17 @@ public:
         gridLayout->addItem(horizontalSpacer, 0, 0, 1, 1);
 
         label = new QLabel(centralwidget);
-        label->setObjectName("label");
+        label->setObjectName("label_user");
 
         gridLayout->addWidget(label, 0, 1, 1, 1);
 
         pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setObjectName("pushButton_login");
 
         gridLayout->addWidget(pushButton_2, 13, 2, 1, 1);
 
         label_2 = new QLabel(centralwidget);
-        label_2->setObjectName("label_2");
+        label_2->setObjectName("label_user");
 
         gridLayout->addWidget(label_2, 1, 1, 1, 1);
 
@@ -116,7 +116,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\344\274\232\350\256\256\345\256\244", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\346\225\231\345\256\244", nullptr));
         lineEdit_3->setText(QString());
         label_4->setText(QCoreApplication::translate("MainWindow", "\351\235\242\347\247\257\357\274\232", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\345\220\215\347\247\260\357\274\232", nullptr));

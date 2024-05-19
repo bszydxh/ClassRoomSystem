@@ -52,12 +52,12 @@ public:
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton");
+        pushButton->setObjectName("pushButton_signup");
 
         verticalLayout->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setObjectName("pushButton_login");
 
         verticalLayout->addWidget(pushButton_2);
 
@@ -96,9 +96,9 @@ private:
 public:
     AdminCfWindow();
     void addItem(QString str);    //向下拉式选项框添加元素
-    void delItem();    //删除会议室
+    void delItem();    //删除教室
     void updateCf();    //更新界面
-    void updateItem();    //更新会议室
+    void updateItem();    //更新教室
 };
 
 #endif // ADMINCFWINDOW_H
