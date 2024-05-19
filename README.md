@@ -1,5 +1,5 @@
 # conferenceRoomReservationSystem
-会议室预约系统
+教室预约系统
 
 ## 一.环境
 该系统使用C++ QT开发，使用方法：

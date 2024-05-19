@@ -38,7 +38,7 @@ void UserCfWindow::filter(){
     QTime stime=findChild<QTimeEdit*>("timeEdit")->time();
     QTime etime=findChild<QTimeEdit*>("timeEdit_2")->time();
     if(stime>=etime){
-        QMessageBox::critical(this,"筛选会议室","时间错误");
+        QMessageBox::critical(this,"筛选教室","时间错误");
         return;
     }
     QDate date=findChild<QDateEdit*>("dateEdit")->date();
@@ -85,7 +85,7 @@ void UserCfWindow::reserve(){
             return;
         }
     }
-    QMessageBox::critical(this,"会议室预约","没有选择会议室");
+    QMessageBox::critical(this,"教室预约","没有选择教室");
 }
 
 void UserCfWindow::view(){
@@ -104,5 +104,5 @@ void UserCfWindow::view(){
             return;
         }
     }
-    QMessageBox::critical(this,"会议室查看","没有选择会议室");
+    QMessageBox::critical(this,"教室查看","没有选择教室");
 }

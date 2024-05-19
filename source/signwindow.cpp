@@ -3,7 +3,7 @@ SignWindow::SignWindow(QMainWindow* parent) :QMainWindow(parent) {
 	//初始化界面//
 	SignUi signUi = SignUi();
 	signUi.setupUi(this);
-	setWindowTitle("会议室系统登录");
+	setWindowTitle("教室系统登录");
 
 	//初始化成员//
 	if (!cf.createConnectionByName("conference"))
@@ -16,8 +16,8 @@ SignWindow::SignWindow(QMainWindow* parent) :QMainWindow(parent) {
 
 	//初始化信号和槽//
 	//当前界面按键/
-	QPushButton* logInBtn = findChild<QPushButton*>("pushButton_2");
-	QPushButton* logOnBtn = findChild<QPushButton*>("pushButton");
+	QPushButton* logInBtn = findChild<QPushButton*>("pushButton_login");
+	QPushButton* logOnBtn = findChild<QPushButton*>("pushButton_signup");
 	connect(logInBtn, &QPushButton::clicked, this, &SignWindow::logIn);
 	connect(logOnBtn, &QPushButton::clicked, this, &SignWindow::logOn);
 	//管理员界面按键/
@@ -49,9 +49,9 @@ void SignWindow::logIn() {
 	QString name = nameLine->text();
 	QString password = passwordLine->text();
 	int author = findChild<QComboBox*>("comboBox")->currentIndex();
-	Users* user = cf.selectQueryUsers(name);
+	std::unique_ptr<Users> user = cf.selectQueryUsers(name);
 	if (user == NULL) {
-		QMessageBox::critical(this, "用户登录", "用户未注册");
+		QMessageBox::critical(this, "用户登录", "用户未注册");;
 		return;
 	}
 	else if (user->password != password) {
@@ -62,7 +62,7 @@ void SignWindow::logIn() {
 		QMessageBox::critical(this, "用户登录", "权限错误");
 		return;
 	}
-	hide();
+	hide();//隐藏登录框
 	if (author == 0) {
 		userWindow->show();
 		userWindow->user_name = name;
@@ -71,7 +71,8 @@ void SignWindow::logIn() {
 }
 void SignWindow::logOn() {
 	QString name = findChild<QLineEdit*>("lineEdit")->text();
-	Users* user = cf.selectQueryUsers(name);
+	std::unique_ptr<Users> user = cf.selectQueryUsers(name);
+	//查一次内存泄露，这不是JAVA
 	if (user != NULL) {
 		QMessageBox::critical(this, "用户注册", "用户已存在");
 		return;

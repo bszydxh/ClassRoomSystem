@@ -47,12 +47,12 @@ public:
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setObjectName("pushButton_login");
 
         verticalLayout->addWidget(pushButton_2);
 
         pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton");
+        pushButton->setObjectName("pushButton_signup");
         pushButton->setLayoutDirection(Qt::LeftToRight);
 
         verticalLayout->addWidget(pushButton);

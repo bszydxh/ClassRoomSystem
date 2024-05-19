@@ -111,12 +111,12 @@ public:
         horizontalLayout = new QHBoxLayout(widget_3);
         horizontalLayout->setObjectName("horizontalLayout");
         pushButton = new QPushButton(widget_3);
-        pushButton->setObjectName("pushButton");
+        pushButton->setObjectName("pushButton_signup");
 
         horizontalLayout->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(widget_3);
-        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setObjectName("pushButton_login");
 
         horizontalLayout->addWidget(pushButton_2);
 
@@ -136,12 +136,12 @@ public:
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         label = new QLabel(widget);
-        label->setObjectName("label");
+        label->setObjectName("label_user");
 
         verticalLayout->addWidget(label);
 
         label_2 = new QLabel(widget);
-        label_2->setObjectName("label_2");
+        label_2->setObjectName("label_user");
 
         verticalLayout->addWidget(label_2);
 
@@ -206,7 +206,7 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "\346\210\277\345\217\267\357\274\232", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "\345\274\200\345\247\213\346\227\245\346\234\237\357\274\232", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "\347\273\223\346\235\237\346\227\245\346\234\237\357\274\232", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "\344\274\232\350\256\256\344\270\273\351\242\230\357\274\232", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "\346\225\231\345\255\246\344\270\273\351\242\230\357\274\232", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "\344\272\272\346\225\260", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "\347\212\266\346\200\201\357\274\232", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "\350\257\264\346\230\216:", nullptr));

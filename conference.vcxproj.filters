@@ -83,6 +83,9 @@
     <ClCompile Include="source\userwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="utf8_oct.c">
+      <Filter>Distribution Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head\admincfwindow.h">
@@ -151,5 +154,13 @@
     <None Include="mysql-qt.md">
       <Filter>Distribution Files</Filter>
     </None>
+    <None Include="conference.sql">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="decode.txt">
+      <Filter>Distribution Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
