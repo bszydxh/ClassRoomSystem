@@ -63,7 +63,7 @@ public:
         horizontalLayout->addWidget(pushButton_3);
 
         pushButton_2 = new QPushButton(widget_2);
-        pushButton_2->setObjectName("pushButton_login");
+        pushButton_2->setObjectName("pushButton_2");
 
         horizontalLayout->addWidget(pushButton_2);
 
@@ -141,7 +141,7 @@ public:
         gridLayout_2->addWidget(widget, 0, 0, 1, 1);
 
         pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton_signup");
+        pushButton->setObjectName("pushButton");
 
         gridLayout_2->addWidget(pushButton, 1, 0, 1, 1);
 

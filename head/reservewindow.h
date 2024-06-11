@@ -111,12 +111,12 @@ public:
         horizontalLayout = new QHBoxLayout(widget_3);
         horizontalLayout->setObjectName("horizontalLayout");
         pushButton = new QPushButton(widget_3);
-        pushButton->setObjectName("pushButton_signup");
+        pushButton->setObjectName("pushButton");
 
         horizontalLayout->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(widget_3);
-        pushButton_2->setObjectName("pushButton_login");
+        pushButton_2->setObjectName("pushButton_2");
 
         horizontalLayout->addWidget(pushButton_2);
 

@@ -12,6 +12,7 @@
 #include <QtWidgets/QWidget>
 
 #include <QCheckBox>
+#include <QDebug>
 #include "reservewindow.h"
 #include "mycfsql.h"
 QT_BEGIN_NAMESPACE
@@ -47,12 +48,12 @@ public:
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName("pushButton_login");
+        pushButton_2->setObjectName("pushButton_2");
 
         verticalLayout->addWidget(pushButton_2);
 
         pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton_signup");
+        pushButton->setObjectName("pushButton");
         pushButton->setLayoutDirection(Qt::LeftToRight);
 
         verticalLayout->addWidget(pushButton);

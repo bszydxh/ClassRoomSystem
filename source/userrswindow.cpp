@@ -75,7 +75,7 @@ void UserRsWindow::updateRs(){    //更新列表
             delete item;
     }
     int state=findChild<QComboBox*>("comboBox")->currentIndex();
-    QPushButton* clBtr=findChild<QPushButton*>("pushButton");
+    QPushButton* clBtr=findChild<QPushButton*>("pushButton_signup");
     if(state==2||state==3) clBtr->setVisible(false);
     else clBtr->setVisible(true);
     Reserves* reserve=cf.selectQueryReserves(user_name,state);
