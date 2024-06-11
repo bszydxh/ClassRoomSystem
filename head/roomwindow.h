@@ -73,7 +73,7 @@ public:
         gridLayout->addWidget(label, 0, 1, 1, 1);
 
         pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_login");
+        pushButton_2->setObjectName("pushButton_2");
 
         gridLayout->addWidget(pushButton_2, 13, 2, 1, 1);
 

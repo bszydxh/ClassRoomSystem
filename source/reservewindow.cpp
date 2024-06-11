@@ -33,6 +33,7 @@ ReserveWindow::ReserveWindow(const QString &user,const int number,const QDateTim
             QString describe=findChild<QTextEdit*>("textEdit")->toPlainText();
             describe+=" 通过时间:"+QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
             cf.updateReserves(user,number,stime,etime,0,describe,1);
+            close();
         });
         connect(rjBtr,&QPushButton::clicked,this,[=](){
             QString user=findChild<QLabel*>("label_9")->text();
@@ -42,6 +43,7 @@ ReserveWindow::ReserveWindow(const QString &user,const int number,const QDateTim
             QString describe=findChild<QTextEdit*>("textEdit")->toPlainText();
             describe+=" 驳回时间:"+QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
             cf.updateReserves(user,number,stime,etime,0,describe,2);
+            close();
         });
     }
 }

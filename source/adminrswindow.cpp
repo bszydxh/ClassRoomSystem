@@ -58,6 +58,7 @@ void AdminRsWindow::addItem(QString str){
 }
 
 void AdminRsWindow::updateRs(){    //更新列表
+
     QListWidget* p=findChild<QListWidget*>("listWidget");
     int counter = p->count();
     QListWidgetItem *item;

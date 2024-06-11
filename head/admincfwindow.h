@@ -52,12 +52,12 @@ public:
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton_signup");
+        pushButton->setObjectName("pushButton");
 
         verticalLayout->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName("pushButton_login");
+        pushButton_2->setObjectName("pushButton_2");
 
         verticalLayout->addWidget(pushButton_2);
 

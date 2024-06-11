@@ -83,9 +83,6 @@
     <ClCompile Include="source\userwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utf8_oct.c">
-      <Filter>Distribution Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head\admincfwindow.h">
@@ -121,9 +118,6 @@
     <ClInclude Include="head\userwindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="head\config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
@@ -151,16 +145,5 @@
     <None Include="conference.pro.user.7fcb233">
       <Filter>Distribution Files</Filter>
     </None>
-    <None Include="mysql-qt.md">
-      <Filter>Distribution Files</Filter>
-    </None>
-    <None Include="conference.sql">
-      <Filter>Distribution Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="decode.txt">
-      <Filter>Distribution Files</Filter>
-    </Text>
   </ItemGroup>
 </Project>

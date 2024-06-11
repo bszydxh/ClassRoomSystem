@@ -60,7 +60,7 @@ std::unique_ptr<Users> MyCfSql::selectQueryUsers(const QString& name) {
 	QString sql = "SELECT * FROM conference_users WHERE users_name='" + name + "'";
 	QSqlQuery query(db);    // [1] 传入数据库连接
 	if (!query.exec(sql)) return NULL;// [2] 执行sql语句
-	if (query.size() == 0) return NULL;;
+	if (query.size() == 0) return NULL;
 	std::unique_ptr<Users> user(new Users());
 	while (query.next()) {  // [3] 遍历查询结果
 		user->name = query.value(1).toString();
@@ -112,7 +112,7 @@ Rooms* MyCfSql::selectQueryRooms(const int number) {
 	QString sql = "SELECT * FROM conference_rooms WHERE rooms_number='" + QString::number(number) + "'";
 	QSqlQuery query(db);    // [1] 传入数据库连接
 	query.exec(sql);        // [2] 执行sql语句
-	if (query.size() == 0) return NULL;;
+	if (query.size() == 0) return NULL;
 	Rooms* room = new Rooms();
 	while (query.next()) {  // [3] 遍历查询结果
 		room->name = query.value(1).toString();
