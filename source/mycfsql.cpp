@@ -3,6 +3,9 @@
 #if __has_include("config.h")//git数据库密码安全
 #include "config.h"
 #elif 
+#define DB_HOSTNAME "localhost"
+#define DB_NAME "conference"
+#define DB_USERNAME "root"
 #define DB_PASSWD "1234"
 #endif
 
@@ -15,9 +18,9 @@ MyCfSql::MyCfSql()
 bool MyCfSql::createConnectionByName(const QString& connectionName) {
 	db = QSqlDatabase::addDatabase("QMYSQL", connectionName);
 	// 数据库连接需要设置的信息
-	db.setHostName("localhost"); // 数据库服务器IP，我用的是本地电脑
-	db.setDatabaseName("conference");// 数据库名
-	db.setUserName("root");// 用户名
+	db.setHostName(DB_HOSTNAME); // 数据库服务器IP，我用的是本地电脑
+	db.setDatabaseName(DB_NAME);// 数据库名
+	db.setUserName(DB_USERNAME);// 用户名
 	db.setPassword(DB_PASSWD);// 密码
 	db.setPort(3306);// 端口号
 
